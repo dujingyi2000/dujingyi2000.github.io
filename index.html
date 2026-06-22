@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jingyi Du · Samantha</title>
+    <meta name="description" content="Jingyi (Samantha) Du — bilingual (Chinese/English) communications, project management and editorial professional. MScR Musicology, University of Edinburgh. Seeking internationally oriented roles.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#dfe7d4',
+                            DEFAULT: '#9CAF88',
+                            dark: '#6f8560',
+                            darker: '#4f6243'
+                        },
+                        sand: {
+                            light: '#faf8f2',
+                            DEFAULT: '#f3eee2',
+                            dark: '#e7dfcc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .section-anchor { scroll-margin-top: 5rem; }
+        /* Show text matching the active language (set on <html lang>) */
+        [data-lang] { display: none; }
+        html[lang="en"] [data-lang="en"],
+        html[lang="zh"] [data-lang="zh"] { display: inline; }
+    </style>
+</head>
+<body class="bg-sand-light text-gray-800 flex flex-col min-h-screen antialiased">
+
+    <!-- ===================== NAV ===================== -->
+    <header class="sticky top-0 z-30 bg-sand-light/90 backdrop-blur border-b border-sand-dark">
+        <nav class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2.5 font-bold text-lg tracking-tight text-gray-900">
+                <img src="favicon_io/android-chrome-192x192.png" alt="logo" class="w-8 h-8 rounded-full ring-1 ring-sand-dark">
+                Jingyi&nbsp;Du
+            </a>
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-brand-darker transition" data-i18n="nav.about"></a>
+                <a href="#experience" class="hover:text-brand-darker transition" data-i18n="nav.experience"></a>
+                <a href="#education" class="hover:text-brand-darker transition" data-i18n="nav.education"></a>
+                <a href="#strengths" class="hover:text-brand-darker transition" data-i18n="nav.strengths"></a>
+                <a href="#contact" class="hover:text-brand-darker transition" data-i18n="nav.contact"></a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="lang-toggle" type="button"
+                        class="text-sm font-semibold text-gray-700 border border-gray-300 hover:bg-gray-100 transition px-3 py-2 rounded-full">
+                    <span data-lang="en">中文</span><span data-lang="zh">EN</span>
+                </button>
+                <a id="cv-nav" href="#" target="_blank" rel="noopener"
+                   class="hidden text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition px-4 py-2 rounded-full"
+                   data-i18n="cv.short"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ===================== HERO ===================== -->
+        <section id="top" class="container mx-auto px-6 py-14 md:py-20">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+                <div class="flex-shrink-0">
+                    <img class="rounded-full object-cover shadow-lg ring-4 ring-white"
+                         style="width: 320px; height: 320px;"
+                         src="profile.png" alt="Jingyi Du">
+                </div>
+
+                <div class="max-w-xl text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-1">
+                        <img src="favicon_io/android-chrome-512x512.png" alt="logo"
+                             class="w-11 h-11 rounded-full ring-2 ring-brand-light shadow-sm">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Jingyi Du</h1>
+                    </div>
+                    <p class="text-gray-400 font-medium mb-3">Samantha</p>
+                    <p class="text-lg text-brand-darker font-semibold mb-5" data-i18n="hero.subtitle"></p>
+                    <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="hero.p1"></p>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="hero.p2"></p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        <a id="cv-primary" href="#" target="_blank" rel="noopener"
+                           class="hidden items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-full transition">
+                            <i class="fas fa-file-pdf"></i> <span data-i18n="cv.primary"></span>
+                        </a>
+                        <a href="mailto:djingyi0910@gmail.com"
+                           class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-full transition">
+                            <i class="fas fa-envelope"></i> <span data-i18n="link.email"></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dujingyi0910samantha/" target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 font-semibold px-5 py-2.5 rounded-full transition">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="section-anchor bg-sand border-y border-sand-dark">
+            <div class="container mx-auto px-6 py-14 max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6" data-i18n="about.heading"></h2>
+                <div class="space-y-4 text-gray-600 leading-relaxed">
+                    <p data-i18n="about.p1"></p>
+                    <p data-i18n="about.p2"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== STRENGTHS ===================== -->
+        <section id="strengths" class="section-anchor container mx-auto px-6 py-14 max-w-5xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="strengths.heading"></h2>
+            <div id="strengths-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience" class="section-anchor bg-sand border-y border-sand-dark">
+            <div class="container mx-auto px-6 py-14 max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="exp.heading"></h2>
+                <ol id="experience-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
+            </div>
+        </section>
+
+        <!-- ===================== EDUCATION ===================== -->
+        <section id="education" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="edu.heading"></h2>
+            <ol id="education-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
+        </section>
+
+        <!-- ===================== HONORS ===================== -->
+        <section id="honors" class="section-anchor bg-sand border-y border-sand-dark">
+            <div class="container mx-auto px-6 py-14 max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="honors.heading"></h2>
+                <ul id="honors-list" class="space-y-4"></ul>
+            </div>
+        </section>
+
+        <!-- ===================== LANGUAGES ===================== -->
+        <section id="languages" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="lang.heading"></h2>
+            <div id="languages-list" class="flex flex-wrap gap-3"></div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="contact" class="section-anchor w-full bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <p class="text-white font-semibold mb-2" data-i18n="footer.email"></p>
+                    <div id="footer-emails" class="space-y-1"></div>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2" data-i18n="footer.phone"></p>
+                    <div id="footer-phones" class="space-y-1"></div>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2" data-i18n="footer.connect"></p>
+                    <div id="footer-connect" class="flex flex-wrap gap-4 text-xl"></div>
+                    <p class="text-sm text-gray-400 mt-3" data-i18n="footer.location"></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-500">
+                © <span id="year"></span> Jingyi Du. <span data-i18n="footer.rights"></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== DATA (edit here to update the site) ===================== -->
+    <script>
+        // ---- Static UI strings: each key has { en, zh }. HTML is allowed. ----
+        const i18n = {
+            "nav.about":      { en: "About",      zh: "关于" },
+            "nav.experience": { en: "Experience", zh: "经历" },
+            "nav.education":  { en: "Education",  zh: "教育" },
+            "nav.strengths":  { en: "Strengths",  zh: "能力" },
+            "nav.contact":    { en: "Contact",    zh: "联系" },
+
+            "cv.short":   { en: "CV",      zh: "简历" },
+            "cv.primary": { en: "CV",      zh: "简历" },
+            "link.email": { en: "Email me", zh: "邮件联系" },
+
+            "hero.subtitle": {
+                en: "Communications &middot; Project Management &middot; Editorial & Content",
+                zh: "传播 &middot; 项目管理 &middot; 编辑与内容"
+            },
+            "hero.p1": {
+                en: 'MScR Musicology candidate at the <span class="font-medium text-gray-800">University of Edinburgh</span> (Pamela Jackson Scholar), with an MA in Comparative & World Literature from <span class="font-medium text-gray-800">Renmin University of China</span>. I turn complex ideas into clear, compelling narratives across languages and cultures.',
+                zh: '<span class="font-medium text-gray-800">爱丁堡大学</span>音乐学研究型硕士（MScR）在读，Pamela Jackson 奖学金获得者；拥有<span class="font-medium text-gray-800">中国人民大学</span>比较文学与世界文学硕士学位。我擅长跨语言、跨文化地将复杂理念转化为清晰而有感染力的叙事。'
+            },
+            "hero.p2": {
+                en: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> Graduating in autumn 2026, I am seeking <span class="font-medium text-gray-800">internationally oriented roles in communications, project management, editorial, marketing & PR and operations</span> — fluent in Chinese and English.',
+                zh: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> 我将于 2026 年秋季毕业，正在寻找<span class="font-medium text-gray-800">传播、项目管理、编辑、市场营销与公关、运营等面向国际的职位</span>，能够使用中英文双语工作。'
+            },
+
+            "about.heading": { en: "About", zh: "关于我" },
+            "about.p1": {
+                en: "My background bridges scholarship, culture and public-facing communication. Through editorial, marketing/PR and programming internships at leading Chinese publishers and cultural organisations, I have edited and produced content, coordinated projects and stakeholders, and led student research initiatives.",
+                zh: "我的背景融合了学术研究、文化洞察与面向公众的传播。在多家中国知名出版社与文化机构的编辑、市场公关及演出策划实习中，我编辑并制作内容、统筹项目与各方关系，并主导学生研究项目。"
+            },
+            "about.p2": {
+                en: "I am an experienced double bassist and an active conference speaker, comfortable presenting to international audiences and working fluently in both Chinese and English.",
+                zh: "我是一名经验丰富的低音提琴演奏者，也是活跃的学术会议发言人，能够自如地面向国际听众演讲，并以中英文流畅工作。"
+            },
+
+            "strengths.heading": { en: "Strengths", zh: "核心能力" },
+            "exp.heading":       { en: "Experience", zh: "工作经历" },
+            "edu.heading":       { en: "Education", zh: "教育背景" },
+            "honors.heading":    { en: "Selected Honors & Awards", zh: "荣誉与奖项（精选）" },
+            "lang.heading":      { en: "Languages", zh: "语言能力" },
+
+            "footer.email":    { en: "Email", zh: "邮箱" },
+            "footer.phone":    { en: "Phone", zh: "电话" },
+            "footer.connect":  { en: "Connect", zh: "其他链接" },
+            "footer.location": { en: "Edinburgh, UK &middot; Beijing, China", zh: "英国爱丁堡 &middot; 中国北京" },
+            "footer.rights":   { en: "All rights reserved.", zh: "保留所有权利。" }
+        };
+
+        // ---- Strengths / transferable skills ----
+        const strengths = [
+            { icon: "fas fa-comments",
+              title: { en: "Bilingual Communication", zh: "中英双语沟通" },
+              desc:  { en: "Native Chinese and full professional English — writing, editing and presenting across both.",
+                       zh: "中文母语、英语专业工作水平，能以双语写作、编辑与演讲。" } },
+            { icon: "fas fa-pen-nib",
+              title: { en: "Editorial & Content", zh: "编辑与内容" },
+              desc:  { en: "Editing, proofreading and producing content for journals, magazines and publishers.",
+                       zh: "为期刊、杂志与出版社进行编辑、校对与内容制作。" } },
+            { icon: "fas fa-tasks",
+              title: { en: "Project Management", zh: "项目管理" },
+              desc:  { en: "Leading research initiatives and coordinating timelines, partners and stakeholders.",
+                       zh: "主导研究项目，统筹进度、合作方与各方关系。" } },
+            { icon: "fas fa-bullhorn",
+              title: { en: "Marketing & PR", zh: "市场营销与公关" },
+              desc:  { en: "Hands-on experience with marketing campaigns and public-relations activities.",
+                       zh: "具备市场营销活动与公共关系的实践经验。" } },
+            { icon: "fas fa-globe",
+              title: { en: "Cross-cultural Coordination", zh: "跨文化协调" },
+              desc:  { en: "Working across China and the UK with international teams and audiences.",
+                       zh: "往返中英两地，与国际团队及受众协作。" } },
+            { icon: "fas fa-search",
+              title: { en: "Research & Analysis", zh: "研究与分析" },
+              desc:  { en: "Turning complex ideas into clear, structured and persuasive narratives.",
+                       zh: "将复杂理念转化为清晰、有条理且具说服力的叙事。" } }
+        ];
+
+        // ---- Experience (newest first) ----
+        const experience = [
+            { role:   { en: "Programming (Outreach) Intern", zh: "演出（拓展）部实习生" },
+              org:    { en: "Wu Promotion", zh: "吴氏策划 (Wu Promotion)" },
+              period: "2024.10 – 2025.08",
+              desc:   { en: "Supported programming and outreach for international performing-arts projects; coordinated artists, partners and communications.",
+                        zh: "参与国际演出项目的策划与拓展，协调艺术家、合作方与对外沟通。" } },
+            { role:   { en: "Editorial Intern", zh: "实习编辑" },
+              org:    { en: "Journal of Studies of Christian Culture (JSCC)", zh: "《基督教文化学刊》(JSCC)" },
+              period: "2022.10 – 2025.08",
+              desc:   { en: "Managed the editorial workflow of an academic journal — copy-editing, proofreading and author coordination.",
+                        zh: "负责学术期刊的编辑流程，包括文字编辑、校对与作者沟通。" } },
+            { role:   { en: "Editorial Intern · Philharmonic Magazine", zh: "《爱乐》杂志 实习编辑" },
+              org:    { en: "Sanlian Lifeweek", zh: "三联生活周刊" },
+              period: "2024.02 – 2024.10",
+              desc:   { en: "Edited and produced music and culture features for a leading national magazine.",
+                        zh: "为国内知名杂志编辑并制作音乐与文化类内容。" } },
+            { role:   { en: "Marketing & PR Intern", zh: "营销与公关实习生" },
+              org:    { en: "Jiade Investment Group", zh: "嘉德投资集团" },
+              period: "2022.07 – 2022.10",
+              desc:   { en: "Supported marketing campaigns and public-relations activities.",
+                        zh: "参与市场营销活动与公共关系工作。" } },
+            { role:   { en: "Editorial & Marketing Intern", zh: "编辑 / 营销实习生" },
+              org:    { en: "CITIC Press Group", zh: "中信出版集团" },
+              period: "2021.11 – 2022.02",
+              desc:   { en: "Assisted with book editing and marketing at a major publishing house.",
+                        zh: "在大型出版集团参与图书编辑与营销工作。" } }
+        ];
+
+        // ---- Education (newest first) ----
+        const education = [
+            { school: { en: "The University of Edinburgh", zh: "爱丁堡大学" },
+              degree: { en: "MSc by Research (MScR), Musicology", zh: "音乐学 研究型硕士 (MScR)" },
+              period: "2025.08 – 2026.09",
+              note:   { en: "Pamela Jackson Scholar · with Edinburgh College of Art & St Cecilia's Hall",
+                        zh: "Pamela Jackson 奖学金获得者 · 与爱丁堡艺术学院及 St Cecilia's Hall 合作" } },
+            { school: { en: "Renmin University of China", zh: "中国人民大学" },
+              degree: { en: "MA, Comparative & World Literature", zh: "比较文学与世界文学 硕士" },
+              period: "2022.09 – 2025.06",
+              note:   { en: "GPA 3.89/4.00 · Beijing Outstanding Graduate",
+                        zh: "GPA 3.89/4.00 · 北京市优秀毕业生" } },
+            { school: { en: "Renmin University of China", zh: "中国人民大学" },
+              degree: { en: "BA, Chinese Language & Literature", zh: "文学学士（汉语言文学）" },
+              period: "2018.09 – 2022.06",
+              note:   { en: "", zh: "" } }
+        ];
+
+        // ---- Honors (most relevant first) ----
+        const honors = [
+            { year: "2026", text: { en: "British Society of Aesthetics Travel Scholarship", zh: "英国美学学会 (BSA) 旅行奖学金" } },
+            { year: "2025", text: { en: "Pamela Jackson Memorial Scholarship — full scholarship, University of Edinburgh", zh: "Pamela Jackson 纪念奖学金——爱丁堡大学全额奖学金" } },
+            { year: "2025", text: { en: "Beijing Outstanding Graduate", zh: "北京市优秀毕业生" } },
+            { year: "2024", text: { en: "First-Class Scholarship for Academic Excellence, Renmin University of China", zh: "中国人民大学学业优秀一等奖学金" } },
+            { year: "2023", text: { en: "RUC Headmaster Scholarship (top international-programme student)", zh: "中国人民大学校长奖学金（国际项目优秀学生）" } },
+            { year: "2018", text: { en: "Gold Award, Chamber Music — Beijing University Student Arts Festival", zh: "北京市大学生艺术节 室内乐金奖" } }
+        ];
+
+        // ---- Languages ----
+        const languages = [
+            { name: { en: "Mandarin Chinese", zh: "普通话" },     level: { en: "Native", zh: "母语" } },
+            { name: { en: "Traditional Chinese", zh: "繁体中文" }, level: { en: "Native", zh: "母语" } },
+            { name: { en: "English", zh: "英语" },                level: { en: "Full professional", zh: "专业工作水平" } },
+            { name: { en: "French", zh: "法语" },                 level: { en: "Elementary", zh: "初级" } },
+            { name: { en: "German", zh: "德语" },                 level: { en: "Elementary", zh: "初级" } },
+            { name: { en: "Latin / Greek", zh: "拉丁语 / 希腊语" }, level: { en: "Reading", zh: "阅读" } }
+        ];
+
+        // ---- Contact. Add wechat / chineseEmail later by filling these in. ----
+        const contact = {
+            emails: ["djingyi0910@gmail.com"],            // add a Chinese email here later
+            phones: ["+86 13161084341", "+44 07350127834"],
+            linkedin: "https://www.linkedin.com/in/dujingyi0910samantha/",
+            wechat: null                                  // e.g. "your-wechat-id"
+            // xiaohongshu: "https://...",  // add Chinese platforms here later
+        };
+
+        // ---- CV file per language (replace the placeholder PDFs with the real ones) ----
+        const cvFiles = { en: "cv.pdf", zh: "cv_ch.pdf" };
+
+        // ===================== Rendering & language switching =====================
+        const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+        const pick = (field, lang) => (field && typeof field === "object" && "en" in field) ? field[lang] : field;
+
+        function renderLists(lang) {
+            document.getElementById("strengths-grid").innerHTML = strengths.map(s => `
+                <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-brand transition">
+                    <div class="text-brand-dark text-xl mb-3"><i class="${esc(s.icon)}"></i></div>
+                    <h3 class="font-semibold text-gray-900 mb-1">${esc(pick(s.title, lang))}</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">${esc(pick(s.desc, lang))}</p>
+                </div>
+            `).join("");
+
+            const timeline = (items, fields) => items.map(it => `
+                <li class="ml-6">
+                    <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></span>
+                    <span class="text-xs font-semibold text-brand-dark">${esc(it.period)}</span>
+                    <h3 class="font-semibold text-gray-900 leading-snug mt-0.5">${esc(pick(it[fields[0]], lang))}</h3>
+                    <p class="text-sm text-gray-700">${esc(pick(it[fields[1]], lang))}</p>
+                    ${pick(it[fields[2]], lang) ? `<p class="text-sm text-gray-500 mt-1">${esc(pick(it[fields[2]], lang))}</p>` : ""}
+                </li>
+            `).join("");
+
+            document.getElementById("experience-list").innerHTML = timeline(experience, ["role", "org", "desc"]);
+            document.getElementById("education-list").innerHTML  = timeline(education, ["degree", "school", "note"]);
+
+            document.getElementById("honors-list").innerHTML = honors.map(h => `
+                <li class="flex gap-4">
+                    <span class="flex-shrink-0 w-14 text-sm font-bold text-brand-dark pt-0.5">${esc(h.year)}</span>
+                    <span class="text-gray-700">${esc(pick(h.text, lang))}</span>
+                </li>
+            `).join("");
+
+            document.getElementById("languages-list").innerHTML = languages.map(l => `
+                <span class="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm">
+                    <span class="font-semibold text-gray-800">${esc(pick(l.name, lang))}</span>
+                    <span class="text-gray-500">${esc(pick(l.level, lang))}</span>
+                </span>
+            `).join("");
+        }
+
+        function renderContact() {
+            document.getElementById("footer-emails").innerHTML = contact.emails.map(e =>
+                `<a href="mailto:${esc(e)}" class="block hover:text-brand-light break-all">${esc(e)}</a>`).join("");
+            document.getElementById("footer-phones").innerHTML = contact.phones.map(p =>
+                `<a href="tel:${esc(p.replace(/\s/g, ""))}" class="block hover:text-brand-light">${esc(p)}</a>`).join("");
+
+            const links = [];
+            if (contact.linkedin)
+                links.push(`<a href="${esc(contact.linkedin)}" target="_blank" rel="noopener" class="hover:text-brand-light" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>`);
+            contact.emails.forEach(e =>
+                links.push(`<a href="mailto:${esc(e)}" class="hover:text-brand-light" aria-label="Email"><i class="fas fa-envelope"></i></a>`));
+            if (contact.wechat)
+                links.push(`<span class="inline-flex items-center gap-1 text-base" title="WeChat"><i class="fab fa-weixin"></i> ${esc(contact.wechat)}</span>`);
+            if (contact.xiaohongshu)
+                links.push(`<a href="${esc(contact.xiaohongshu)}" target="_blank" rel="noopener" class="hover:text-brand-light" aria-label="Xiaohongshu"><i class="fas fa-book-open"></i></a>`);
+            document.getElementById("footer-connect").innerHTML = links.join("");
+        }
+
+        function setLang(lang) {
+            if (lang !== "en") lang = "zh";
+            document.documentElement.setAttribute("lang", lang);
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const entry = i18n[el.getAttribute("data-i18n")];
+                if (entry) el.innerHTML = entry[lang];
+            });
+            const cv = cvFiles[lang];
+            if (cv) {
+                ["cv-nav", "cv-primary"].forEach(id => {
+                    const el = document.getElementById(id);
+                    el.setAttribute("href", cv);
+                    el.classList.remove("hidden");
+                    el.classList.add(id === "cv-nav" ? "inline-block" : "inline-flex");
+                });
+            }
+            renderLists(lang);
+            try { localStorage.setItem("jingyi.lang", lang); } catch (e) {}
+        }
+
+        // Init — Chinese is the default
+        let initial = "zh";
+        try { if (localStorage.getItem("jingyi.lang") === "en") initial = "en"; } catch (e) {}
+        renderContact();
+        setLang(initial);
+
+        document.getElementById("lang-toggle").addEventListener("click", () => {
+            setLang(document.documentElement.getAttribute("lang") === "en" ? "zh" : "en");
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
