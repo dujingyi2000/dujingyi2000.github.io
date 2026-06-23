@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jingyi Du · Samantha</title>
-    <meta name="description" content="Jingyi (Samantha) Du — bilingual (Chinese/English) communications, project management and editorial professional. MScR Musicology, University of Edinburgh. Seeking internationally oriented roles.">
+    <meta name="description" content="Jingyi (Samantha) Du — musicology-trained cultural content strategist and project practitioner working across digital music, sound studies, international arts and cross-cultural media. MScR Musicology, University of Edinburgh.">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -39,6 +39,7 @@
     <style>
         html { scroll-behavior: smooth; }
         .section-anchor { scroll-margin-top: 5rem; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
         /* Show text matching the active language (set on <html lang>) */
         [data-lang] { display: none; }
         html[lang="en"] [data-lang="en"],
@@ -54,11 +55,13 @@
                 <img src="favicon_io/android-chrome-192x192.png" alt="logo" class="w-8 h-8 rounded-full ring-1 ring-sand-dark">
                 Jingyi&nbsp;Du
             </a>
-            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+            <div class="hidden md:flex items-center gap-x-4 lg:gap-x-5 text-sm font-medium text-gray-600">
                 <a href="#about" class="hover:text-brand-darker transition" data-i18n="nav.about"></a>
                 <a href="#experience" class="hover:text-brand-darker transition" data-i18n="nav.experience"></a>
-                <a href="#education" class="hover:text-brand-darker transition" data-i18n="nav.education"></a>
-                <a href="#strengths" class="hover:text-brand-darker transition" data-i18n="nav.strengths"></a>
+                <a href="#projects" class="hover:text-brand-darker transition" data-i18n="nav.projects"></a>
+                <a href="#publications" class="hover:text-brand-darker transition" data-i18n="nav.research"></a>
+                <a href="#awards" class="hover:text-brand-darker transition" data-i18n="nav.awards"></a>
+                <a href="#skills" class="hover:text-brand-darker transition" data-i18n="nav.skills"></a>
                 <a href="#contact" class="hover:text-brand-darker transition" data-i18n="nav.contact"></a>
             </div>
             <div class="flex items-center gap-3">
@@ -79,9 +82,9 @@
         <section id="top" class="container mx-auto px-6 py-14 md:py-20">
             <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
                 <div class="flex-shrink-0">
-                    <img class="rounded-full object-cover shadow-lg ring-4 ring-white"
+                    <img class="rounded-full object-contain bg-sand-light shadow-lg ring-4 ring-sand-light"
                          style="width: 320px; height: 320px;"
-                         src="profile.png" alt="Jingyi Du">
+                         src="profile.jpg" alt="Jingyi Du">
                 </div>
 
                 <div class="max-w-xl text-center md:text-left">
@@ -108,6 +111,10 @@
                            class="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 font-semibold px-5 py-2.5 rounded-full transition">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
+                        <button id="wechat-btn" type="button" aria-haspopup="dialog"
+                           class="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 font-semibold px-5 py-2.5 rounded-full transition">
+                            <i class="fab fa-weixin text-[#07C160]"></i> <span data-i18n="link.wechat"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -120,35 +127,51 @@
                 <div class="space-y-4 text-gray-600 leading-relaxed">
                     <p data-i18n="about.p1"></p>
                     <p data-i18n="about.p2"></p>
+                    <p data-i18n="about.p3"></p>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== STRENGTHS ===================== -->
-        <section id="strengths" class="section-anchor container mx-auto px-6 py-14 max-w-5xl">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="strengths.heading"></h2>
-            <div id="strengths-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-        </section>
-
         <!-- ===================== EXPERIENCE ===================== -->
-        <section id="experience" class="section-anchor bg-sand border-y border-sand-dark">
-            <div class="container mx-auto px-6 py-14 max-w-4xl">
-                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="exp.heading"></h2>
-                <ol id="experience-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
-            </div>
+        <section id="experience" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="exp.heading"></h2>
+            <ol id="experience-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
         </section>
 
         <!-- ===================== EDUCATION ===================== -->
-        <section id="education" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="edu.heading"></h2>
-            <ol id="education-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
+        <section id="education" class="section-anchor bg-sand border-y border-sand-dark">
+            <div class="container mx-auto px-6 py-14 max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="edu.heading"></h2>
+                <ol id="education-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
+            </div>
         </section>
 
-        <!-- ===================== HONORS ===================== -->
-        <section id="honors" class="section-anchor bg-sand border-y border-sand-dark">
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="proj.heading"></h2>
+            <ol id="projects-list" class="relative border-l border-gray-200 ml-3 space-y-8"></ol>
+        </section>
+
+        <!-- ===================== RESEARCH & PUBLICATIONS ===================== -->
+        <section id="publications" class="section-anchor bg-sand border-y border-sand-dark">
             <div class="container mx-auto px-6 py-14 max-w-4xl">
-                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="honors.heading"></h2>
-                <ul id="honors-list" class="space-y-4"></ul>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6" data-i18n="pub.heading"></h2>
+                <p class="text-gray-600 leading-relaxed mb-8" data-i18n="research.body"></p>
+                <ul id="publications-list" class="space-y-4"></ul>
+            </div>
+        </section>
+
+        <!-- ===================== AWARDS ===================== -->
+        <section id="awards" class="section-anchor container mx-auto px-6 py-14 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="awards.heading"></h2>
+            <ul id="awards-list" class="space-y-4"></ul>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="section-anchor bg-sand border-y border-sand-dark">
+            <div class="container mx-auto px-6 py-14 max-w-5xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n="skills.heading"></h2>
+                <div id="skills-list"></div>
             </div>
         </section>
 
@@ -184,48 +207,81 @@
         </div>
     </footer>
 
+    <!-- ===================== WECHAT QR POPUP ===================== -->
+    <div id="wechat-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="wechat-title">
+        <div id="wechat-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl p-6 max-w-xs w-full text-center animate-[fadeIn_.15s_ease-out]">
+            <button id="wechat-close" type="button" aria-label="Close"
+                    class="absolute top-3 right-3 w-8 h-8 rounded-full text-gray-400 hover:bg-gray-100 hover:text-gray-700 transition flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 id="wechat-title" class="font-semibold text-gray-900 mb-1" data-i18n="wechat.title"></h3>
+            <p class="text-sm text-gray-500 mb-4" data-i18n="wechat.hint"></p>
+            <img src="wechat_qr.png" alt="WeChat QR code" class="w-56 h-56 mx-auto rounded-lg ring-1 ring-gray-200">
+        </div>
+    </div>
+
     <!-- ===================== DATA (edit here to update the site) ===================== -->
     <script>
         // ---- Static UI strings: each key has { en, zh }. HTML is allowed. ----
         const i18n = {
             "nav.about":      { en: "About",      zh: "关于" },
             "nav.experience": { en: "Experience", zh: "经历" },
-            "nav.education":  { en: "Education",  zh: "教育" },
-            "nav.strengths":  { en: "Strengths",  zh: "能力" },
+            "nav.projects":   { en: "Projects",   zh: "项目" },
+            "nav.research":   { en: "Research",   zh: "研究" },
+            "nav.awards":     { en: "Awards",     zh: "奖项" },
+            "nav.skills":     { en: "Skills",     zh: "技能" },
             "nav.contact":    { en: "Contact",    zh: "联系" },
 
             "cv.short":   { en: "CV",      zh: "简历" },
             "cv.primary": { en: "CV",      zh: "简历" },
-            "link.email": { en: "Email me", zh: "邮件联系" },
+            "link.email":  { en: "Email me", zh: "邮件联系" },
+            "link.wechat": { en: "WeChat",   zh: "微信" },
+
+            "wechat.title": { en: "Scan to add me on WeChat", zh: "扫码添加微信" },
+            "wechat.hint":  { en: "Open WeChat and scan the QR code", zh: "打开微信，扫一扫" },
+
+            "more.show": { en: "Show more", zh: "展开" },
+            "more.hide": { en: "Show less", zh: "收起" },
 
             "hero.subtitle": {
-                en: "Communications &middot; Project Management &middot; Editorial & Content",
-                zh: "传播 &middot; 项目管理 &middot; 编辑与内容"
+                en: "Musicology &middot; Sound Studies &middot; Cultural Translation &middot; Digital Music & Media &middot; International Content Strategy",
+                zh: "杜静漪｜音乐学研究者、内容策略与文化项目实践者"
             },
             "hero.p1": {
-                en: 'MScR Musicology candidate at the <span class="font-medium text-gray-800">University of Edinburgh</span> (Pamela Jackson Scholar), with an MA in Comparative & World Literature from <span class="font-medium text-gray-800">Renmin University of China</span>. I turn complex ideas into clear, compelling narratives across languages and cultures.',
-                zh: '<span class="font-medium text-gray-800">爱丁堡大学</span>音乐学研究型硕士（MScR）在读，Pamela Jackson 奖学金获得者；拥有<span class="font-medium text-gray-800">中国人民大学</span>比较文学与世界文学硕士学位。我擅长跨语言、跨文化地将复杂理念转化为清晰而有感染力的叙事。'
+                en: 'Musicology-trained cultural content strategist, researcher and project practitioner working across digital music, sound studies, international arts programming and cross-cultural media. Currently an <span class="font-medium text-gray-800">MScR Musicology</span> candidate at the <span class="font-medium text-gray-800">University of Edinburgh</span> (Pamela Jackson Scholar).',
+                zh: '具有音乐学背景的内容策略、研究与文化项目实践者，工作横跨数字音乐、声音研究、国际艺术项目与跨文化媒介。现就读于<span class="font-medium text-gray-800">爱丁堡大学</span><span class="font-medium text-gray-800">音乐学研究型硕士（MScR）</span>，Pamela Jackson 奖学金获得者。'
             },
             "hero.p2": {
-                en: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> Graduating in autumn 2026, I am seeking <span class="font-medium text-gray-800">internationally oriented roles in communications, project management, editorial, marketing & PR and operations</span> — fluent in Chinese and English.',
-                zh: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> 我将于 2026 年秋季毕业，正在寻找<span class="font-medium text-gray-800">传播、项目管理、编辑、市场营销与公关、运营等面向国际的职位</span>，能够使用中英文双语工作。'
+                en: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> Graduating in 2026, I am seeking <span class="font-medium text-gray-800">internationally oriented roles across digital music platforms, music content & IP strategy, content localisation, editorial and cultural project work</span> — fluent in Chinese and English.',
+                zh: '<i class="fas fa-briefcase text-brand-dark mr-1"></i> 我将于 2026 年毕业，正在寻找<span class="font-medium text-gray-800">面向国际的职位，方向包括数字音乐平台、音乐内容与 IP 策略、内容本地化、编辑与文化项目</span>，能以中英文双语工作。'
             },
 
             "about.heading": { en: "About", zh: "关于我" },
             "about.p1": {
-                en: "My background bridges scholarship, culture and public-facing communication. Through editorial, marketing/PR and programming internships at leading Chinese publishers and cultural organisations, I have edited and produced content, coordinated projects and stakeholders, and led student research initiatives.",
-                zh: "我的背景融合了学术研究、文化洞察与面向公众的传播。在多家中国知名出版社与文化机构的编辑、市场公关及演出策划实习中，我编辑并制作内容、统筹项目与各方关系，并主导学生研究项目。"
+                en: "Jingyi (Samantha) Du is a musicology-trained cultural content strategist, researcher and project practitioner working across digital music, sound studies, international arts programming and cross-cultural media. She is currently pursuing an MScR in Musicology at the University of Edinburgh, supported by the Pamela Jackson Memorial Scholarship. Her current research, in collaboration with St Cecilia's Hall, examines silent instruments, proxy sound, museum interpretation and public listening through organology, Chinese listening philosophy, phenomenology and media theory.",
+                zh: "杜静漪（Jingyi / Samantha Du）是一名具有音乐学、比较文学与艺术实践背景的内容策略与文化项目实践者，关注数字音乐平台、声音研究、国际音乐内容、文化转译、听觉策展与 AI 辅助创作工作流。她现就读于英国爱丁堡大学音乐学研究型硕士项目，并获得 Pamela Jackson Memorial Scholarship 全额奖学金及生活补贴。其当前研究与 St Cecilia's Hall 乐器博物馆合作，围绕“沉默乐器”、代理声音、博物馆展示与公众聆听展开，结合器物学、中国聆听哲学、现象学与媒介理论。"
             },
             "about.p2": {
-                en: "I am an experienced double bassist and an active conference speaker, comfortable presenting to international audiences and working fluently in both Chinese and English.",
-                zh: "我是一名经验丰富的低音提琴演奏者，也是活跃的学术会议发言人，能够自如地面向国际听众演讲，并以中英文流畅工作。"
+                en: "Alongside academic research, she has built professional experience in international arts programming, music journalism, public relations, editorial work, publishing and orchestral leadership. Her work has involved multilingual content coordination, project documentation, public-facing cultural communication, stakeholder liaison, music and arts writing, campaign support, user-oriented interpretation and cross-institutional collaboration.",
+                zh: "除学术研究外，她具备国际艺术项目策划、音乐媒体写作、艺术机构市场传播、出版编辑、公众内容转译与交响乐团组织管理经验。她曾参与跨国艺术项目的材料统筹与外部沟通、音乐与艺术内容的公众化表达、机构传播与活动支持、用户导向的导览与体验研究，以及多方协作项目的推进与复盘。"
+            },
+            "about.p3": {
+                en: "Her current professional interests lie in digital music platforms, international music content, music IP strategy, artist and content localisation, platform operations, sound curation, AI-assisted creative workflows, and the relationship between music, technology and public experience. She aims to work at the intersection of music, culture, technology and global media — translating complex artistic and intellectual materials into accessible, strategically useful and culturally sensitive content.",
+                zh: "她当前的职业兴趣集中于数字音乐平台、国际音乐内容、音乐 IP 策略、艺人与内容本地化、平台运营、声音策展、AI 辅助创作流程，以及音乐、技术与公共经验之间的关系。她希望在音乐、文化、技术与全球媒介的交汇处工作，将复杂的艺术与智识内容转化为可传播、可执行、具备文化敏感度的内容资产与项目方案。"
             },
 
-            "strengths.heading": { en: "Strengths", zh: "核心能力" },
-            "exp.heading":       { en: "Experience", zh: "工作经历" },
-            "edu.heading":       { en: "Education", zh: "教育背景" },
-            "honors.heading":    { en: "Selected Honors & Awards", zh: "荣誉与奖项（精选）" },
-            "lang.heading":      { en: "Languages", zh: "语言能力" },
+            "exp.heading":    { en: "Work Experience", zh: "工作经历" },
+            "edu.heading":    { en: "Education", zh: "教育背景" },
+            "proj.heading":   { en: "Selected Projects", zh: "代表性项目" },
+            "research.body": {
+                en: "Current research at the University of Edinburgh, in collaboration with St Cecilia's Hall, on silent instruments, proxy sound, museum interpretation and public listening — combining organology, Chinese listening philosophy, phenomenology and media theory. An active conference speaker, presenting across the UK, Europe and China.",
+                zh: "目前在爱丁堡大学的研究与 St Cecilia's Hall 乐器博物馆合作，围绕沉默乐器、代理声音、博物馆阐释与公众聆听展开，结合器物学、中国聆听哲学、现象学与媒介理论。同时是活跃的会议发言人，曾在英国、欧洲与中国多地发表。"
+            },
+            "pub.heading":    { en: "Research & Publications", zh: "研究与发表" },
+            "awards.heading": { en: "Awards & Scholarships", zh: "奖项与奖学金" },
+            "skills.heading": { en: "Skills", zh: "技能" },
+            "lang.heading":   { en: "Languages", zh: "语言能力" },
 
             "footer.email":    { en: "Email", zh: "邮箱" },
             "footer.phone":    { en: "Phone", zh: "电话" },
@@ -234,61 +290,133 @@
             "footer.rights":   { en: "All rights reserved.", zh: "保留所有权利。" }
         };
 
-        // ---- Strengths / transferable skills ----
-        const strengths = [
-            { icon: "fas fa-comments",
-              title: { en: "Bilingual Communication", zh: "中英双语沟通" },
-              desc:  { en: "Native Chinese and full professional English — writing, editing and presenting across both.",
-                       zh: "中文母语、英语专业工作水平，能以双语写作、编辑与演讲。" } },
-            { icon: "fas fa-pen-nib",
-              title: { en: "Editorial & Content", zh: "编辑与内容" },
-              desc:  { en: "Editing, proofreading and producing content for journals, magazines and publishers.",
-                       zh: "为期刊、杂志与出版社进行编辑、校对与内容制作。" } },
-            { icon: "fas fa-tasks",
-              title: { en: "Project Management", zh: "项目管理" },
-              desc:  { en: "Leading research initiatives and coordinating timelines, partners and stakeholders.",
-                       zh: "主导研究项目，统筹进度、合作方与各方关系。" } },
-            { icon: "fas fa-bullhorn",
-              title: { en: "Marketing & PR", zh: "市场营销与公关" },
-              desc:  { en: "Hands-on experience with marketing campaigns and public-relations activities.",
-                       zh: "具备市场营销活动与公共关系的实践经验。" } },
-            { icon: "fas fa-globe",
-              title: { en: "Cross-cultural Coordination", zh: "跨文化协调" },
-              desc:  { en: "Working across China and the UK with international teams and audiences.",
-                       zh: "往返中英两地，与国际团队及受众协作。" } },
-            { icon: "fas fa-search",
-              title: { en: "Research & Analysis", zh: "研究与分析" },
-              desc:  { en: "Turning complex ideas into clear, structured and persuasive narratives.",
-                       zh: "将复杂理念转化为清晰、有条理且具说服力的叙事。" } }
-        ];
-
-        // ---- Experience (newest first) ----
+        // ---- Work experience (newest first). Each entry: summary shown by default, details under "Show more". ----
         const experience = [
-            { role:   { en: "Programming (Outreach) Intern", zh: "演出（拓展）部实习生" },
-              org:    { en: "Wu Promotion", zh: "吴氏策划 (Wu Promotion)" },
-              period: "2024.10 – 2025.08",
-              desc:   { en: "Supported programming and outreach for international performing-arts projects; coordinated artists, partners and communications.",
-                        zh: "参与国际演出项目的策划与拓展，协调艺术家、合作方与对外沟通。" } },
-            { role:   { en: "Editorial Intern", zh: "实习编辑" },
-              org:    { en: "Journal of Studies of Christian Culture (JSCC)", zh: "《基督教文化学刊》(JSCC)" },
-              period: "2022.10 – 2025.08",
-              desc:   { en: "Managed the editorial workflow of an academic journal — copy-editing, proofreading and author coordination.",
-                        zh: "负责学术期刊的编辑流程，包括文字编辑、校对与作者沟通。" } },
-            { role:   { en: "Editorial Intern · Philharmonic Magazine", zh: "《爱乐》杂志 实习编辑" },
-              org:    { en: "Sanlian Lifeweek", zh: "三联生活周刊" },
-              period: "2024.02 – 2024.10",
-              desc:   { en: "Edited and produced music and culture features for a leading national magazine.",
-                        zh: "为国内知名杂志编辑并制作音乐与文化类内容。" } },
-            { role:   { en: "Marketing & PR Intern", zh: "营销与公关实习生" },
-              org:    { en: "Jiade Investment Group", zh: "嘉德投资集团" },
-              period: "2022.07 – 2022.10",
-              desc:   { en: "Supported marketing campaigns and public-relations activities.",
-                        zh: "参与市场营销活动与公共关系工作。" } },
-            { role:   { en: "Editorial & Marketing Intern", zh: "编辑 / 营销实习生" },
-              org:    { en: "CITIC Press Group", zh: "中信出版集团" },
-              period: "2021.11 – 2022.02",
-              desc:   { en: "Assisted with book editing and marketing at a major publishing house.",
-                        zh: "在大型出版集团参与图书编辑与营销工作。" } }
+            { role:   { en: "Programming Intern · International Arts Project Coordination", zh: "演出策划实习生 · 国际艺术项目统筹" },
+              org:    { en: "Wu Promotion Co., Ltd. — Beijing, China", zh: "吴氏策划 (Wu Promotion) — 中国北京" },
+              period: "2024.10 – 2025.01",
+              summary:{ en: "Worked on international performing-arts project coordination, multilingual materials and cross-cultural communication for a leading arts-management company.",
+                        zh: "在领先的艺术管理机构参与国际演出项目统筹、多语种材料与跨文化沟通。" },
+              details:{ en: [
+                  "Supported international arts programming and early-stage project coordination for high-level performing-arts projects.",
+                  "Assisted with multilingual project materials — artist information, programme notes, repertoire documents, institutional communications and project files.",
+                  "Coordinated information across internal teams and external stakeholders in Chinese and English.",
+                  "Organised and reviewed non-standardised materials under tight timelines, maintaining accuracy, consistency and professional tone.",
+                  "Developed practical experience in international arts administration, stakeholder communication and culturally sensitive wording." ],
+                  zh: [
+                  "参与高规格演出项目的国际策划与早期项目统筹。",
+                  "协助处理多语种项目材料，包括艺术家资料、节目单、曲目文件、机构沟通材料与项目文档。",
+                  "以中英文在内部团队与外部合作方之间协调信息。",
+                  "在紧张周期内整理与审校非标准化材料，确保准确、一致与专业的表达。",
+                  "积累了国际艺术行政、利益相关方沟通与文化敏感表达方面的实务经验。" ] } },
+
+            { role:   { en: "Marketing & Public Relations Intern", zh: "市场与公关实习生" },
+              org:    { en: "China Guardian Art Center / Investment Holdings — Beijing, China", zh: "中国嘉德艺术中心 / 嘉德投资 — 中国北京" },
+              period: "2022.06 – 2022.10",
+              summary:{ en: "Worked on exhibition communication, public-facing cultural content, event support, social-media planning and user-oriented museum experience analysis.",
+                        zh: "参与展览传播、面向公众的文化内容、活动支持、社交媒体策划与用户导向的观展体验分析。" },
+              details:{ en: [
+                  "Supported public communication and marketing for major art exhibitions and institutional events.",
+                  "Assisted with official copywriting, press materials, exhibition-label proofreading and audio-guide content.",
+                  "Participated in event preparation, on-site coordination, media-facing communication and internal documentation.",
+                  "Contributed to social-media content planning and public engagement across Weibo and Xiaohongshu.",
+                  "Conducted user-oriented observations on exhibition experience, visual communication and accessibility.",
+                  "Supported market research for digital-tool evaluation and visitor-communication workflows." ],
+                  zh: [
+                  "支持大型艺术展览与机构活动的公众传播与市场工作。",
+                  "协助官方文案、新闻材料、展签校对与语音导览内容。",
+                  "参与活动筹备、现场协调、媒体沟通与内部文档。",
+                  "参与微博、小红书等平台的社媒内容策划与公众互动。",
+                  "围绕观展体验、视觉传达与可达性开展用户导向观察。",
+                  "为数字工具评估与观众沟通流程提供市场调研与参考材料。" ] } },
+
+            { role:   { en: "Editorial & Content Marketing", zh: "编辑与内容营销" },
+              org:    { en: "Sanlian Lifeweek (Philharmonic) · JSCC · CITIC Press — Beijing, China", zh: "三联生活周刊《爱乐》· 《基督教文化学刊》· 中信出版 — 中国北京" },
+              period: "2021 – 2025",
+              summary:{ en: "Built long-term editorial and content experience across music journalism, academic publishing, cultural media and publishing-sector marketing.",
+                        zh: "在音乐媒体、学术出版、文化媒体与出版营销领域积累了长期的编辑与内容经验。" },
+              details:{ en: [
+                  "Produced and edited public-facing cultural, music and intellectual content for magazine, academic and publishing contexts.",
+                  "Translated complex musicological, philosophical and cultural topics into accessible writing for broader audiences.",
+                  "Supported editorial review, article restructuring, proofreading, formatting and platform publication.",
+                  "Participated in multi-platform content operations and campaign communication for publishing projects.",
+                  "Assisted with KOL/KOC communication and audience-facing material development." ],
+                  zh: [
+                  "为杂志、学术与出版场景制作并编辑面向公众的文化、音乐与思想类内容。",
+                  "将复杂的音乐学、哲学与文化议题转化为面向大众的可读写作。",
+                  "支持编辑审稿、文章重构、校对、排版与平台发布。",
+                  "参与出版项目的多平台内容运营与活动传播。",
+                  "协助 KOL/KOC 沟通与面向受众的材料开发。" ] } },
+
+            { role:   { en: "Student Leader · Producer · Double Bass Principal", zh: "学生团长 · 制作人 · 低音提琴首席" },
+              org:    { en: "Renmin University of China Symphony Orchestra — Beijing, China", zh: "中国人民大学交响乐团 — 中国北京" },
+              period: "2018 – 2025",
+              summary:{ en: "Led a 100+ member university orchestra, combining artistic practice, organisational management, concert production and leadership under high-pressure conditions.",
+                        zh: "带领百余人规模的大学交响乐团，融合艺术实践、组织管理、音乐会制作与高压下的领导力。" },
+              details:{ en: [
+                  "Led and coordinated a 100+ member student orchestra through rehearsal planning, performance preparation and team management.",
+                  "Managed internal communication, project timelines, rehearsal logistics and performance coordination.",
+                  "Produced and supported large-scale concerts and university-level cultural events.",
+                  "Built digital collaboration workflows and organisational procedures during periods of disruption.",
+                  "Continued professional double-bass performance across university and external orchestral contexts." ],
+                  zh: [
+                  "通过排练规划、演出筹备与团队管理，带领并协调百余人的学生乐团。",
+                  "管理内部沟通、项目进度、排练后勤与演出协调。",
+                  "制作并支持大型音乐会与校级文化活动。",
+                  "在特殊时期建立数字协作流程与组织制度。",
+                  "持续在校内外乐团进行专业低音提琴演奏。" ] } },
+
+            { role:   { en: "Double Bass Section Leader · Performer", zh: "低音提琴声部长 · 演奏者" },
+              org:    { en: "University of Edinburgh Orchestral Practice — Edinburgh, UK", zh: "爱丁堡大学乐团实践 — 英国爱丁堡" },
+              period: "2023",
+              summary:{ en: "Section leader in university orchestral and chamber-music settings, working across international student ensembles.",
+                        zh: "在大学乐团与室内乐中担任低音提琴声部长，参与国际学生合奏。" },
+              details:{ en: [
+                  "Served as double-bass section leader in university orchestral and chamber-music settings.",
+                  "Participated in rehearsals and performances across international student ensembles.",
+                  "Strengthened performance leadership, ensemble communication and cross-cultural musical collaboration." ],
+                  zh: [
+                  "在大学乐团与室内乐中担任低音提琴声部长。",
+                  "参与国际学生合奏的排练与演出。",
+                  "增强了演奏领导力、合奏沟通与跨文化音乐协作。" ] } },
+
+            { role:   { en: "Associate Player · Double Bass", zh: "合作演奏员 · 低音提琴" },
+              org:    { en: "Beijing Symphony Orchestra — Beijing, China", zh: "北京交响乐团 — 中国北京" },
+              period: "2023 – 2025",
+              summary:{ en: "Professional orchestral practice and selected performance activities, with advanced double-bass training and ensemble experience.",
+                        zh: "参与职业乐团实践与部分演出活动，持续进阶低音提琴训练与合奏经验。" } },
+
+            { role:   { en: "Consultant · Admissions Communication", zh: "招生咨询顾问 · 招生沟通" },
+              org:    { en: "Renmin University of China Admissions Advisory Team — Beijing, China", zh: "中国人民大学招生咨询团队 — 中国北京" },
+              period: "2023.07 – 2024.08 (seasonal)",
+              summary:{ en: "Provided structured admissions consultation and high-pressure information communication for prospective students and families.",
+                        zh: "为意向学生与家庭提供结构化的招生咨询与高压情境下的信息沟通。" },
+              details:{ en: [
+                  "Supported high-pressure admissions communication and consultation for prospective students and families.",
+                  "Translated complex policy, programme and career-path information into clear, audience-specific guidance.",
+                  "Conducted one-to-one communication with competitive applicants under time-sensitive conditions.",
+                  "Developed persuasion, high-density information delivery and decision-oriented communication skills." ],
+                  zh: [
+                  "为意向学生与家庭提供高压情境下的招生沟通与咨询。",
+                  "将复杂的政策、项目与职业路径信息转化为清晰、针对性的指导。",
+                  "在时间紧迫的条件下与高竞争力申请者进行一对一沟通。",
+                  "锻炼了说服力、高密度信息传达与以决策为导向的沟通能力。" ] } },
+
+            { role:   { en: "Teaching · Graduate · Research Assistant", zh: "助教 · 研究生助理 · 科研助理" },
+              org:    { en: "Renmin University of China — Beijing, China", zh: "中国人民大学 — 中国北京" },
+              period: "2022 – 2024",
+              summary:{ en: "Supported teaching, research training and student mentoring across literature, art theory and the humanities.",
+                        zh: "在文学、艺术理论与人文领域支持教学、科研训练与学生指导。" },
+              details:{ en: [
+                  "Supported undergraduate and graduate courses in Western literature, art theory and contemporary humanities.",
+                  "Assisted with course preparation, academic discussion, student guidance and research training.",
+                  "Supported student research — topic development, literature review, research design and presentation.",
+                  "Developed experience in academic mentoring, structured feedback and knowledge organisation." ],
+                  zh: [
+                  "支持西方文学、艺术理论与当代人文方向的本科与研究生课程。",
+                  "协助课程准备、学术讨论、学生指导与科研训练。",
+                  "支持学生科研——选题、文献综述、研究设计与展示准备。",
+                  "积累了学术指导、结构化反馈与知识组织方面的经验。" ] } }
         ];
 
         // ---- Education (newest first) ----
@@ -309,24 +437,235 @@
               note:   { en: "", zh: "" } }
         ];
 
-        // ---- Honors (most relevant first) ----
-        const honors = [
-            { year: "2026", text: { en: "British Society of Aesthetics Travel Scholarship", zh: "英国美学学会 (BSA) 旅行奖学金" } },
-            { year: "2025", text: { en: "Pamela Jackson Memorial Scholarship — full scholarship, University of Edinburgh", zh: "Pamela Jackson 纪念奖学金——爱丁堡大学全额奖学金" } },
-            { year: "2025", text: { en: "Beijing Outstanding Graduate", zh: "北京市优秀毕业生" } },
-            { year: "2024", text: { en: "First-Class Scholarship for Academic Excellence, Renmin University of China", zh: "中国人民大学学业优秀一等奖学金" } },
-            { year: "2023", text: { en: "RUC Headmaster Scholarship (top international-programme student)", zh: "中国人民大学校长奖学金（国际项目优秀学生）" } },
-            { year: "2018", text: { en: "Gold Award, Chamber Music — Beijing University Student Arts Festival", zh: "北京市大学生艺术节 室内乐金奖" } }
+        // ---- Selected projects (newest first). Summary shown by default, details under "Show more". ----
+        const projects = [
+            { title:  { en: "From Silent Instruments to Proxy Sound", zh: "从沉默乐器到代理声音" },
+              org:    { en: "MScR Research · University of Edinburgh & St Cecilia's Hall", zh: "研究型硕士课题 · 爱丁堡大学与 St Cecilia's Hall" },
+              period: "2025.09 – 2026",
+              summary:{ en: "A sound and museum-interpretation project exploring how musical objects can be translated into public listening experiences through text, audio, display and narrative design.",
+                        zh: "一个声音与博物馆阐释项目，探索如何通过文本、音频、展示与叙事设计，将乐器转化为面向公众的聆听体验。" },
+              details:{ en: [
+                  "Researching silent instruments, proxy sound, museum display and public listening.",
+                  "Examines how instruments without live sound are interpreted through labels, recordings, guided narratives, audio scripts and curatorial mediation.",
+                  "Combines organology, Chinese listening philosophy, phenomenology and media theory.",
+                  "Develops concepts for museum interpretation, sound curation, public listening and cultural translation.",
+                  "Planned outputs: dissertation, public presentation material and possible curatorial proposals." ],
+                  zh: [
+                  "研究沉默乐器、代理声音、博物馆展示与公众聆听。",
+                  "考察无现场声音的乐器如何通过展签、录音、导览叙事、音频脚本与策展中介被阐释。",
+                  "结合器物学、中国聆听哲学、现象学与媒介理论。",
+                  "发展可用于博物馆阐释、声音策展、公众聆听与文化转译的概念。",
+                  "计划成果包括学位论文、公众展示材料与可能的策展提案。" ] } },
+
+            { title:  { en: "IPM–SMA Summer School in Popular Music Theory & Analysis", zh: "IPM–SMA 流行音乐理论与分析暑期学校" },
+              org:    { en: "Selected Participant · University of Liverpool", zh: "入选学员 · 利物浦大学" },
+              period: "2026.07",
+              summary:{ en: "Training in popular-music analysis with relevance to music content strategy, artist positioning, genre communication and platform-facing writing.",
+                        zh: "流行音乐分析训练，与音乐内容策略、艺人定位、风格传播与面向平台的写作相关。" },
+              details:{ en: [
+                  "Selected for an intensive programme on contemporary popular-music theory and analytical methods.",
+                  "Engaged with current debates in popular-music analysis, style, form, genre and cultural interpretation.",
+                  "Develops transferable tools for content positioning, artist/track interpretation and platform communication." ],
+                  zh: [
+                  "入选当代流行音乐理论与分析方法的强化项目。",
+                  "参与流行音乐分析、风格、形式、类型与音乐文化阐释的前沿讨论。",
+                  "发展可迁移的内容定位、艺人/曲目阐释与平台传播工具。" ] } },
+
+            { title:  { en: "China–Greece Civilization Mutual Learning Program", zh: "中希文明互鉴项目" },
+              org:    { en: "Research Member · Renmin University / University of Patras", zh: "研究成员 · 中国人民大学 / 帕特雷大学" },
+              period: "2023.07",
+              summary:{ en: "An international research and communication project combining music, art history, cross-cultural interpretation and public presentation.",
+                        zh: "一个国际研究与传播项目，结合音乐、艺术史、跨文化阐释与公众展示。" },
+              details:{ en: [
+                  "Conducted independent research on musical iconography in ancient Greece and China.",
+                  "Examined how musical images, instruments and symbolic forms participate in cultural imagination and meaning-making.",
+                  "Presented findings in an international academic setting.",
+                  "Awarded the DAHUA International Communication Scholarship." ],
+                  zh: [
+                  "就古希腊与古代中国的音乐图像学开展独立研究。",
+                  "考察音乐图像、乐器与象征形式如何参与文化想象与意义建构。",
+                  "在国际学术场合展示研究成果。",
+                  "获大华国际传播奖学金。" ] } },
+
+            { title:  { en: "Oxford Program for the Future of Cities: Cultural Leadership", zh: "牛津城市未来项目：文化领导力" },
+              org:    { en: "Research Member · Oxford, UK / Online", zh: "研究成员 · 英国牛津 / 线上" },
+              period: "2020.07",
+              summary:{ en: "An accessibility-focused cultural-leadership project on how museums and heritage sites can better serve visually impaired children through inclusive design and public education.",
+                        zh: "一个聚焦可达性的文化领导力项目，探讨博物馆与遗产地如何通过包容性设计与公众教育更好地服务视障儿童。" },
+              details:{ en: [
+                  "Contributed to a group project on increasing accessibility of art and heritage sites for visually impaired children.",
+                  "Used cultural policy, public education, accessibility and urban-studies perspectives to propose inclusive solutions.",
+                  "Collaborated with an international team to develop and present a final project.",
+                  "Awarded the Research Project Award for Academic Excellence." ],
+                  zh: [
+                  "参与提升艺术与遗产场所对视障儿童可达性的小组项目。",
+                  "运用文化政策、公众教育、可达性与城市研究视角提出包容性方案。",
+                  "与国际团队协作完成并展示最终项目。",
+                  "获学术卓越研究项目奖。" ] } },
+
+            { title:  { en: "Digital Humanities Elite Training Camp", zh: "数字人文精英训练营" },
+              org:    { en: "Project Member · Theoretical Framework Lead", zh: "项目成员 · 理论框架负责人" },
+              period: "2024.07",
+              summary:{ en: "A digital-curation and guide-design project connecting cultural interpretation, knowledge graphs, user experience and public-facing digital products.",
+                        zh: "一个数字策展与导览设计项目，连接文化阐释、知识图谱、用户体验与面向公众的数字产品。" },
+              details:{ en: [
+                  "Project: Electronic Guide Based on Metaphor and Knowledge Graphs.",
+                  "Explored how metaphor theory and knowledge-graph methods can support electronic-guide design.",
+                  "Contributed to theoretical modelling, conceptual structure and user-oriented interpretation logic.",
+                  "Helped transform abstract cultural concepts into a prototype-level digital guide framework." ],
+                  zh: [
+                  "项目：基于隐喻与知识图谱的电子导览。",
+                  "探索隐喻理论与知识图谱方法如何支持电子导览设计。",
+                  "参与理论建模、概念结构与用户导向的阐释逻辑。",
+                  "协助将抽象的文化概念转化为原型级的数字导览框架。" ] } },
+
+            { title:  { en: "Winter Research School on Spiritual Ecology & Socio-Economic Justice", zh: "精神生态与社会经济正义冬季研修班" },
+              org:    { en: "Participant · LMU Munich, Yale, ETH Zurich & partners", zh: "学员 · 慕尼黑大学、耶鲁、苏黎世联邦理工等合作院校" },
+              period: "2025.03 – 2025.05",
+              summary:{ en: "An interdisciplinary international project linking digital environments, value systems, ecological ethics and non-Western philosophical resources.",
+                        zh: "一个跨学科国际项目，连接数字环境、价值体系、生态伦理与非西方哲学资源。" },
+              details:{ en: [
+                  "Participated in interdisciplinary lectures on ecological ethics, spirituality, social justice and sustainable transformation.",
+                  "Collaborated on a final presentation, 'Spiritual Ecology and Value Reprogramming in Digital Environments.'",
+                  "Explored how AI and digital media may incorporate non-Western ecological philosophies.",
+                  "Developed a cross-cultural framework connecting perception, value, action and social transformation." ],
+                  zh: [
+                  "参与生态伦理、精神性、社会正义与可持续转型的跨学科讲座。",
+                  "合作完成结课展示《数字环境中的精神生态与价值重编程》。",
+                  "探索 AI 与数字媒介如何纳入非西方生态哲学。",
+                  "建构连接感知、价值、行动与社会转型的跨文化框架。" ] } },
+
+            { title:  { en: "New Age Poetry Education for Left-Behind Children", zh: "新时代留守儿童诗歌教育" },
+              org:    { en: "Project Leader · Renmin University Innovation Program", zh: "项目负责人 · 人大大学生创新计划" },
+              period: "2020.05 – 2021.05",
+              summary:{ en: "A social-impact education project using poetry, field research and public pedagogy to address the needs of rural left-behind children.",
+                        zh: "一个社会影响力教育项目，运用诗歌、田野调查与公共教育回应农村留守儿童的需求。" },
+              details:{ en: [
+                  "Led a year-long research project on poetry education for left-behind children.",
+                  "Conducted fieldwork, interviews and participatory observation in Jiangxi Province.",
+                  "Developed educational materials drawing on literature education and poetry studies.",
+                  "Built leadership, field research, public education and long-cycle research coordination skills." ],
+                  zh: [
+                  "主导为期一年的留守儿童诗歌教育研究项目。",
+                  "在江西省开展田野调查、访谈与参与式观察。",
+                  "结合文学教育与诗歌研究开发教学材料。",
+                  "锻炼了项目领导、田野研究、公共教育与长周期研究协调能力。" ] } },
+
+            { title:  { en: "'Qiu-Shi' University Student Innovation Program", zh: "“求是”大学生创新计划" },
+              org:    { en: "Graduate Assistant · Research Support · Renmin University", zh: "研究生助理 · 科研支持 · 中国人民大学" },
+              period: "2024.06",
+              summary:{ en: "A research-training and project-management role focused on mentoring undergraduate teams and improving interdisciplinary project delivery.",
+                        zh: "一个以科研训练与项目管理为核心的角色，指导本科团队并提升跨学科项目交付。" },
+              details:{ en: [
+                  "Supported undergraduate research training and interdisciplinary innovation projects.",
+                  "Guided students in research-question formulation, literature review, methodology and presentation.",
+                  "Assisted faculty advisors in academic project management and mentoring." ],
+                  zh: [
+                  "支持本科科研训练与跨学科创新项目。",
+                  "指导学生进行研究问题构建、文献综述、方法论与展示。",
+                  "协助导师进行学术项目管理与指导。" ] } },
+
+            { title:  { en: "'Mingde Future Thinkers' Research Program", zh: "“明德未来思想者”研究计划" },
+              org:    { en: "Selected Participant · School of Philosophy, Renmin University", zh: "入选学员 · 中国人民大学哲学院" },
+              period: "2020.12 – 2021.05",
+              summary:{ en: "An interdisciplinary research programme with qualitative fieldwork on vernacular religious life in Hebei Province.",
+                        zh: "一个跨学科研究项目，在河北省围绕民间宗教生活开展质性田野调查。" },
+              details:{ en: [
+                  "Selected for an interdisciplinary programme hosted by the School of Philosophy.",
+                  "Conducted fieldwork in Zhengding County, Hebei, on Buddhist practices and vernacular religious life.",
+                  "Conducted interviews, collected qualitative data and produced a final report and presentation.",
+                  "Developed qualitative research, fieldwork, interview and cultural-analysis skills." ],
+                  zh: [
+                  "入选由哲学院主办的跨学科项目。",
+                  "在河北正定县就佛教实践与民间宗教生活开展田野调查。",
+                  "进行访谈、收集质性数据，并完成结题报告与口头展示。",
+                  "锻炼了质性研究、田野、访谈与文化分析能力。" ] } }
+        ];
+
+        // ---- Publications & conference presentations (grouped by year; titles kept in original language) ----
+        const publications = [
+            { year: "2026", items: [
+                "“Silence and After-Resonance: Musicking as Thought.” Accepted — MPSG 2026, RMA Music and Philosophy Study Group Conference, Dublin, Ireland.",
+                "“Resonating Beyond Sound: The Temporality of Yú (余) in Chinese Instrumental Aesthetics.” Accepted — ISST 2026, 19th Triennial Conference of the International Society for the Study of Time, University of Cagliari, Italy." ] },
+            { year: "2025", items: [
+                "“‘The Five Tones Heal Diseases’ and ‘Great Sound is Silent’: Musical Perception and Cosmic Order in Chinese Philosophy.” 24th International Conference on Chinese Philosophy, University of Ljubljana, Slovenia.",
+                "“Viral Narratives in Interactive Storytelling: Contagion, Subjectivity, and the Dissolution of Boundaries.” Ludonarratives Young Scholars’ Conference, University of Szczecin, Poland." ] },
+            { year: "2024", items: [
+                "“Gender Ambiguity and Cultural Intersection in Mahler’s Das Lied von der Erde.” Sounding China in Western Music, Shanghai Conservatory of Music, China.",
+                "“The rA9 Phenomenon: Identity Reconstruction through Android Bodies and Virus Simulation in Detroit: Become Human.” First National Graduate Game Forum, East China Normal University, China.",
+                "“The Iconology of Organ and Sacred Femininity During the Renaissance.” The Impact of Antiquity on European Art, China Academy of Art, Hangzhou, China." ] }
+        ];
+
+        // ---- Awards & scholarships (most recent first) ----
+        const awards = [
+            { year: "2026", text: { en: "British Society of Aesthetics Travel Scholarship (£800)", zh: "英国美学学会 (BSA) 旅行奖学金（£800）" } },
+            { year: "2026", text: { en: "Postgraduate Research Expenses Grant (£500)", zh: "研究生科研经费资助（£500）" } },
+            { year: "2025", text: { en: "Pamela Jackson Memorial Scholarship — full scholarship with living stipend, University of Edinburgh", zh: "Pamela Jackson 纪念奖学金——爱丁堡大学全额奖学金及生活补贴" } },
+            { year: "2025", text: { en: "Beijing Municipal Outstanding Graduate", zh: "北京市优秀毕业生" } },
+            { year: "2024", text: { en: "First-Class Scholarship in Academic Excellence, Renmin University of China", zh: "中国人民大学学业优秀一等奖学金" } },
+            { year: "2024", text: { en: "Gold Award — Symphony Orchestra, Beijing University Students Art Festival", zh: "北京市大学生艺术节 交响乐团 金奖" } },
+            { year: "2024", text: { en: "Gold Award — Traditional Chinese Orchestra, Beijing University Students Art Festival", zh: "北京市大学生艺术节 民族乐团 金奖" } },
+            { year: "2023", text: { en: "Headmaster Scholarship, Renmin University of China", zh: "中国人民大学校长奖学金" } },
+            { year: "2023", text: { en: "DAHUA International Communication Scholarship", zh: "大华国际传播奖学金" } },
+            { year: "2022", text: { en: "First-Class Scholarship in Arts & Sports, Renmin University of China", zh: "中国人民大学文体优秀一等奖学金" } },
+            { year: "2021", text: { en: "Scholarship for Excellence and Development, School of Liberal Arts, RUC", zh: "中国人民大学文学院优秀与发展奖学金" } },
+            { year: "2021", text: { en: "Xie Wuliang Literature Competition — Second Prize, Poetry", zh: "谢无量文学奖 诗歌组二等奖" } },
+            { year: "2020", text: { en: "National Student Innovation Program Grant", zh: "国家级大学生创新计划立项" } },
+            { year: "2020", text: { en: "Silver Award — Chamber Music / Strings, Beijing University Students Art Festival", zh: "北京市大学生艺术节 室内乐（弦乐）银奖" } },
+            { year: "2018–21", text: { en: "Fundamental Disciplines Scholarship, Renmin University of China", zh: "中国人民大学拔尖基础学科奖学金" } },
+            { year: "2018", text: { en: "Gold Award — Chamber Music / Strings, Beijing University Students Art Festival", zh: "北京市大学生艺术节 室内乐（弦乐）金奖" } }
+        ];
+
+        // ---- Skills (grouped) ----
+        const skills = [
+            { cat: { en: "Music, Sound & Cultural Research", zh: "音乐、声音与文化研究" },
+              items: [
+                { en: "Musicology", zh: "音乐学" }, { en: "Philosophy of music", zh: "音乐哲学" },
+                { en: "Sound studies", zh: "声音研究" }, { en: "Listening theory", zh: "聆听理论" },
+                { en: "Organology", zh: "器物学" }, { en: "Museum interpretation", zh: "博物馆阐释" },
+                { en: "Popular music analysis", zh: "流行音乐分析" }, { en: "Music iconology", zh: "音乐图像学" },
+                { en: "Cross-cultural music research", zh: "跨文化音乐研究" }, { en: "Mahler studies", zh: "马勒研究" },
+                { en: "Game studies & posthuman media theory", zh: "游戏研究与后人类媒介理论" } ] },
+            { cat: { en: "Content, Editorial & Communication", zh: "内容、编辑与传播" },
+              items: [
+                { en: "English & Chinese academic writing", zh: "中英学术写作" },
+                { en: "Public-facing music writing", zh: "面向公众的音乐写作" },
+                { en: "Editorial review & restructuring", zh: "编辑审稿与重构" },
+                { en: "Copywriting & press materials", zh: "文案与新闻材料" },
+                { en: "Content localisation", zh: "内容本地化" }, { en: "Cultural translation", zh: "文化转译" },
+                { en: "Music & arts storytelling", zh: "音乐与艺术叙事" },
+                { en: "Tone & messaging alignment", zh: "语调与信息一致性" },
+                { en: "Conference presentation & public speaking", zh: "会议演讲与公众表达" } ] },
+            { cat: { en: "Project & Industry Skills", zh: "项目与行业技能" },
+              items: [
+                { en: "International arts project coordination", zh: "国际艺术项目统筹" },
+                { en: "Stakeholder communication", zh: "利益相关方沟通" },
+                { en: "Cross-institutional collaboration", zh: "跨机构协作" },
+                { en: "Project documentation", zh: "项目文档" }, { en: "Workflow management", zh: "流程管理" },
+                { en: "Public relations support", zh: "公关支持" }, { en: "Campaign support", zh: "活动支持" },
+                { en: "User-oriented cultural interpretation", zh: "用户导向的文化阐释" },
+                { en: "Museum & audio-guide thinking", zh: "博物馆与语音导览思维" },
+                { en: "Content strategy", zh: "内容策略" }, { en: "Digital platform thinking", zh: "数字平台思维" },
+                { en: "Partnership operations", zh: "合作运营" } ] },
+            { cat: { en: "Digital & AI Tools", zh: "数字与 AI 工具" },
+              items: [
+                { en: "LLM-assisted research workflow", zh: "LLM 辅助研究流程" },
+                { en: "AI-assisted content production", zh: "AI 辅助内容生产" },
+                { en: "Runway", zh: "Runway" }, { en: "Suno", zh: "Suno" }, { en: "Midjourney", zh: "Midjourney" },
+                { en: "MuseScore", zh: "MuseScore" }, { en: "Sibelius", zh: "Sibelius" },
+                { en: "Lark / Feishu", zh: "飞书 Lark" }, { en: "Microsoft Office", zh: "Microsoft Office" },
+                { en: "PowerPoint", zh: "PowerPoint" }, { en: "Excel", zh: "Excel" },
+                { en: "Project / Visio", zh: "Project / Visio" } ] }
         ];
 
         // ---- Languages ----
         const languages = [
-            { name: { en: "Mandarin Chinese", zh: "普通话" },     level: { en: "Native", zh: "母语" } },
-            { name: { en: "Traditional Chinese", zh: "繁体中文" }, level: { en: "Native", zh: "母语" } },
-            { name: { en: "English", zh: "英语" },                level: { en: "Full professional", zh: "专业工作水平" } },
-            { name: { en: "French", zh: "法语" },                 level: { en: "Elementary", zh: "初级" } },
-            { name: { en: "German", zh: "德语" },                 level: { en: "Elementary", zh: "初级" } },
-            { name: { en: "Latin / Greek", zh: "拉丁语 / 希腊语" }, level: { en: "Reading", zh: "阅读" } }
+            { name: { en: "Chinese", zh: "中文" },              level: { en: "Native · advanced classical & modern writing", zh: "母语 · 精于古典与现代中文写作" } },
+            { name: { en: "English", zh: "英语" },              level: { en: "Fluent academic & professional", zh: "学术与专业流利" } },
+            { name: { en: "French", zh: "法语" },               level: { en: "Basic reading & writing", zh: "基础读写" } },
+            { name: { en: "German", zh: "德语" },               level: { en: "Basic reading & writing", zh: "基础读写" } },
+            { name: { en: "Modern Greek", zh: "现代希腊语" },     level: { en: "Basic", zh: "基础应用" } },
+            { name: { en: "Classical Greek / Latin / Hebrew", zh: "古希腊语 / 拉丁语 / 希伯来语" }, level: { en: "Academic reading", zh: "学术阅读" } }
         ];
 
         // ---- Contact. Add wechat / chineseEmail later by filling these in. ----
@@ -338,40 +677,87 @@
             // xiaohongshu: "https://...",  // add Chinese platforms here later
         };
 
-        // ---- CV file per language (replace the placeholder PDFs with the real ones) ----
-        const cvFiles = { en: "cv.pdf", zh: "cv_ch.pdf" };
+        // ---- CV file per language (English = .docx, Chinese = .pdf) ----
+        const cvFiles = { en: "cv.docx", zh: "cv_ch.pdf" };
 
         // ===================== Rendering & language switching =====================
         const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
-        const pick = (field, lang) => (field && typeof field === "object" && "en" in field) ? field[lang] : field;
+        const pick = (field, lang) => (field && typeof field === "object" && !Array.isArray(field) && "en" in field) ? field[lang] : field;
+
+        // Expand / collapse the details of an experience or project entry.
+        function toggleDetails(btn) {
+            const li = btn.closest("[data-entry]");
+            const det = li.querySelector(".entry-details");
+            const icon = btn.querySelector("i");
+            const open = !det.classList.toggle("hidden");
+            btn.querySelector(".lbl").textContent = open ? btn.dataset.less : btn.dataset.more;
+            if (icon) icon.style.transform = open ? "rotate(180deg)" : "";
+        }
+
+        // Build one timeline entry with an optional "Show more" details block.
+        function entryCard(it, lang, titleField, subField) {
+            const summary = pick(it.summary, lang);
+            const details = it.details ? pick(it.details, lang) : null;
+            const hasDetails = Array.isArray(details) && details.length;
+            const more = pick(i18n["more.show"], lang), less = pick(i18n["more.hide"], lang);
+            return `
+                <li class="ml-6" data-entry>
+                    <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></span>
+                    <span class="text-xs font-semibold text-brand-dark">${esc(it.period)}</span>
+                    <h3 class="font-semibold text-gray-900 leading-snug mt-0.5">${esc(pick(it[titleField], lang))}</h3>
+                    <p class="text-sm text-gray-700">${esc(pick(it[subField], lang))}</p>
+                    ${summary ? `<p class="text-sm text-gray-600 mt-1.5 leading-relaxed">${esc(summary)}</p>` : ""}
+                    ${hasDetails ? `
+                        <ul class="entry-details hidden list-disc pl-5 mt-2 space-y-1 text-sm text-gray-600 leading-relaxed">
+                            ${details.map(d => `<li>${esc(d)}</li>`).join("")}
+                        </ul>
+                        <button type="button" onclick="toggleDetails(this)" data-more="${esc(more)}" data-less="${esc(less)}"
+                                class="mt-2 text-xs font-semibold text-brand-dark hover:text-brand-darker inline-flex items-center gap-1">
+                            <span class="lbl">${esc(more)}</span> <i class="fas fa-chevron-down text-[10px] transition-transform"></i>
+                        </button>` : ""}
+                </li>`;
+        }
 
         function renderLists(lang) {
-            document.getElementById("strengths-grid").innerHTML = strengths.map(s => `
-                <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-brand transition">
-                    <div class="text-brand-dark text-xl mb-3"><i class="${esc(s.icon)}"></i></div>
-                    <h3 class="font-semibold text-gray-900 mb-1">${esc(pick(s.title, lang))}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">${esc(pick(s.desc, lang))}</p>
-                </div>
-            `).join("");
+            document.getElementById("experience-list").innerHTML =
+                experience.map(it => entryCard(it, lang, "role", "org")).join("");
 
-            const timeline = (items, fields) => items.map(it => `
+            document.getElementById("projects-list").innerHTML =
+                projects.map(it => entryCard(it, lang, "title", "org")).join("");
+
+            document.getElementById("education-list").innerHTML = education.map(it => `
                 <li class="ml-6">
                     <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></span>
                     <span class="text-xs font-semibold text-brand-dark">${esc(it.period)}</span>
-                    <h3 class="font-semibold text-gray-900 leading-snug mt-0.5">${esc(pick(it[fields[0]], lang))}</h3>
-                    <p class="text-sm text-gray-700">${esc(pick(it[fields[1]], lang))}</p>
-                    ${pick(it[fields[2]], lang) ? `<p class="text-sm text-gray-500 mt-1">${esc(pick(it[fields[2]], lang))}</p>` : ""}
+                    <h3 class="font-semibold text-gray-900 leading-snug mt-0.5">${esc(pick(it.degree, lang))}</h3>
+                    <p class="text-sm text-gray-700">${esc(pick(it.school, lang))}</p>
+                    ${pick(it.note, lang) ? `<p class="text-sm text-gray-500 mt-1">${esc(pick(it.note, lang))}</p>` : ""}
                 </li>
             `).join("");
 
-            document.getElementById("experience-list").innerHTML = timeline(experience, ["role", "org", "desc"]);
-            document.getElementById("education-list").innerHTML  = timeline(education, ["degree", "school", "note"]);
+            document.getElementById("publications-list").innerHTML = publications.flatMap(g =>
+                g.items.map(t => `
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-16 text-sm font-bold text-brand-dark pt-0.5">${esc(g.year)}</span>
+                        <span class="text-gray-700 leading-relaxed">${esc(t)}</span>
+                    </li>
+                `)
+            ).join("");
 
-            document.getElementById("honors-list").innerHTML = honors.map(h => `
+            document.getElementById("awards-list").innerHTML = awards.map(a => `
                 <li class="flex gap-4">
-                    <span class="flex-shrink-0 w-14 text-sm font-bold text-brand-dark pt-0.5">${esc(h.year)}</span>
-                    <span class="text-gray-700">${esc(pick(h.text, lang))}</span>
+                    <span class="flex-shrink-0 w-16 text-sm font-bold text-brand-dark pt-0.5">${esc(a.year)}</span>
+                    <span class="text-gray-700">${esc(pick(a.text, lang))}</span>
                 </li>
+            `).join("");
+
+            document.getElementById("skills-list").innerHTML = skills.map(c => `
+                <div class="mb-6 last:mb-0">
+                    <h3 class="font-semibold text-gray-900 mb-3">${esc(pick(c.cat, lang))}</h3>
+                    <div class="flex flex-wrap gap-2">
+                        ${c.items.map(s => `<span class="inline-flex bg-white border border-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">${esc(pick(s, lang))}</span>`).join("")}
+                    </div>
+                </div>
             `).join("");
 
             document.getElementById("languages-list").innerHTML = languages.map(l => `
@@ -429,6 +815,15 @@
         document.getElementById("lang-toggle").addEventListener("click", () => {
             setLang(document.documentElement.getAttribute("lang") === "en" ? "zh" : "en");
         });
+
+        // ---- WeChat QR popup ----
+        const wechatModal = document.getElementById("wechat-modal");
+        const openWechat  = () => { wechatModal.classList.remove("hidden"); document.body.style.overflow = "hidden"; };
+        const closeWechat = () => { wechatModal.classList.add("hidden"); document.body.style.overflow = ""; };
+        document.getElementById("wechat-btn").addEventListener("click", openWechat);
+        document.getElementById("wechat-close").addEventListener("click", closeWechat);
+        document.getElementById("wechat-overlay").addEventListener("click", closeWechat);
+        document.addEventListener("keydown", e => { if (e.key === "Escape") closeWechat(); });
 
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
